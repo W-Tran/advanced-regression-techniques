@@ -1,6 +1,7 @@
 attrs==19.1.0
 backcall==0.1.0
 bleach==3.1.0
+certifi==2019.6.16
 Click==7.0
 colorama==0.4.1
 cycler==0.10.0
@@ -32,10 +33,11 @@ kiwisolver==1.1.0
 MarkupSafe==1.1.1
 matplotlib==3.1.0rc2
 mistune==0.8.4
+mlxtend==0.17.0
 nbconvert==5.5.0
 nbformat==4.4.0
 notebook==6.0.0
-numpy==1.16.1
+numpy==1.17.0
 pandas==0.25.0
 pandocfilters==1.4.2
 parso==0.5.1
@@ -68,3 +70,4 @@ wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.15.5
 widgetsnbextension==3.5.1
+wincertstore==0.2
