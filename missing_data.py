@@ -1,6 +1,7 @@
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.impute import SimpleImputer
 
+
 class MissingDataImputer(BaseEstimator, TransformerMixin):
     def __init__(self, impute_all=False, impute_lotfrontage=False):
         self.impute_lotfrontage = impute_lotfrontage
