@@ -1,9 +1,8 @@
 from sklearn.model_selection import learning_curve
 import numpy as np
-import matplotlib.pyplot as plt
 
 
-def plot_learning_curve(estimator, X, y, cv=5):
+def compute_learning_curve(estimator, X, y, cv=5):
     train_sizes, train_scores, test_scores = \
         learning_curve(estimator=estimator,
                        scoring='neg_mean_squared_error',
@@ -19,27 +18,40 @@ def plot_learning_curve(estimator, X, y, cv=5):
     test_mean = np.mean(np.sqrt(-test_scores), axis=1)
     test_std = np.std(np.sqrt(-test_scores), axis=1)
 
-    plt.plot(train_sizes, train_mean,
-             color='blue', marker='o',
-             markersize=5, label='training RMSE')
+    learning_curve_params = {
+        'train_sizes': train_sizes,
+        'train_scores': train_scores,
+        'test_scores': test_scores,
+        'train_mean': train_mean,
+        'train_std': train_std,
+        'test_mean': test_mean,
+        'test_std': test_std
+    }
 
-    plt.fill_between(train_sizes,
-                     train_mean + train_std,
-                     train_mean - train_std,
-                     alpha=0.15, color='blue')
+    return learning_curve_params
 
-    plt.plot(train_sizes, test_mean,
-             color='green', linestyle='--',
-             marker='s', markersize=5,
-             label='validation RMSE')
 
-    plt.fill_between(train_sizes,
-                     test_mean + test_std,
-                     test_mean - test_std,
-                     alpha=0.15, color='green')
+def plot_learning_curve(ax, lc_params):
+    ax.plot(lc_params['train_sizes'], lc_params['train_mean'],
+            color='blue', marker='o',
+            markersize=5, label='training RMSE')
 
-    plt.grid()
-    plt.xlabel('Number of training samples')
-    plt.ylabel('RMSE')
-    plt.legend()
-    plt.tight_layout()
+    ax.fill_between(lc_params['train_sizes'],
+                    lc_params['train_mean'] + lc_params['train_std'],
+                    lc_params['train_mean'] - lc_params['train_std'],
+                    alpha=0.15, color='blue')
+
+    ax.plot(lc_params['train_sizes'], lc_params['test_mean'],
+            color='green', linestyle='--',
+            marker='s', markersize=5,
+            label='validation RMSE')
+
+    ax.fill_between(lc_params['train_sizes'],
+                    lc_params['test_mean'] + lc_params['test_std'],
+                    lc_params['test_mean'] - lc_params['test_std'],
+                    alpha=0.15, color='green')
+
+    ax.grid()
+    ax.set_xlabel('Number of training samples')
+    ax.set_ylabel('RMSE')
+    ax.legend()
