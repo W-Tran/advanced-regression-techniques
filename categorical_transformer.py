@@ -83,8 +83,10 @@ class CatTransformer(BaseEstimator, TransformerMixin):
             ordinal[feat] = ordinal[feat].apply(lambda x: x.lower())
             ordinal[feat] = ordinal[feat].map(mapping)
 
-        self.ordinal_feats.append('OverallQual')
-        self.ordinal_feats.append('OverallCond')
+        if 'OverallQual' not in self.ordinal_feats:
+            self.ordinal_feats.append('OverallQual')
+        if 'OverallCond' not in self.ordinal_feats:
+            self.ordinal_feats.append('OverallCond')
 
         X_copy = pd.concat([X_copy, ordinal, nominal], axis=1, join='inner')
         self.all_feature_names = X_copy.columns.tolist()
