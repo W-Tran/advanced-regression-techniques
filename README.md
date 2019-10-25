@@ -6,7 +6,7 @@ A "knowledge" competition hosted by Kaggle to test advanced regression technique
 
 I purposely stuck to Linear models (Lasso, OLSR, GLMs etc) and avoided producing multi-model ensembles to boost my leaderboard score as model simplicity and interpretability was a priority of mine (see the interpretation section of the notebook). 
 
-My final model was a simple OLSR with feature selection performed sequentially using the [mlxtend](http://rasbt.github.io/mlxtend/) library (0.12090 RMSLE, 1237/4485 on LB as of 24/08/2019).
+My final model was a simple OLSR with feature selection performed sequentially using [mlxtend](http://rasbt.github.io/mlxtend/) (0.12090 RMSLE, 1051/4887 on LB as of 24/08/2019).
 
 From a brief perusal of the notebooks on Kaggle that scored better, here are some things that I could implement in the future to improve my LB score without resorting to ensembling:
 
