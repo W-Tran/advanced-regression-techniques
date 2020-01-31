@@ -1,2 +1,0 @@
-Selected features: ('LotArea', 'OverallQual', 'OverallCond', 'GrLivArea', 'Fireplaces', 'GarageCars', 'WoodDeckSF', 'ScreenPorch', 'ExterQual', 'BsmtExposure', 'BsmtFinType1', 'KitchenQual', 'Functional', 'HouseStyle_2Story', 'LotConfig_CulDSac', 'Neighborhood_BrkSide', 'Neighborhood_Crawfor', 'Neighborhood_NoRidge', 'Neighborhood_NridgHt', 'Neighborhood_Somerst', 'Neighborhood_StoneBr', 'Condition1_Norm', 'RoofStyle_Hip', 'RoofMatl_WdShngl', 'Exterior1st_BrkFace', 'GarageType_None', 'SaleType_New', 'MSSubClass_20', 'MSSubClass_60')
-Best score: -920424329.5081524
