@@ -6,7 +6,6 @@ class MissingDataImputer(BaseEstimator, TransformerMixin):
     def __init__(self, impute_all=False, impute_lotfrontage=False):
         self.impute_lotfrontage = impute_lotfrontage
         self.impute_all = impute_all
-        return None
 
     def fit(self, X, y=None):
         return self
