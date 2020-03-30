@@ -15,6 +15,14 @@ Things to try in the future to improve my LB score without resorting to ensembli
 - Create indicator features that flag categorical feature levels that spike the sale price (see step 3 of [this](https://www.kaggle.com/agehsbarg/top-10-0-10943-stacking-mice-and-brutal-force))
 - MICE to impute MAR missing values
 
+## Installation
+
+Simply clone the repo and install all dependencies listed in the requirements.txt file to an environment of your choice.
+
+## Usage
+
+All results and plots can be reproduced using the advanced-regression-techniques.ipynb notebook. The Scikit-learn style data transformation pipeline can be found in the art_pipeline.ipynb notebook which uses slightly different data transformations than the ones found in the original notebook but achieves similar LB performance.
+
 <p align="center"><img src="data/figures/best_model_subplots.png" width=800></p>
 <p align="center"><img src="data/figures/influence_plot.png" width=450></p>
 <p align="center"><img src="data/figures/effect_plot.png" width=450></p>
