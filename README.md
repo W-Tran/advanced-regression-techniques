@@ -21,7 +21,7 @@ Simply clone the repo and install all dependencies listed in the requirements.tx
 
 ## Usage
 
-All results and plots can be reproduced using the advanced-regression-techniques.ipynb notebook. The Scikit-learn style data transformation pipeline can be found in the art_pipeline.ipynb notebook which uses slightly different data engineering than the model found in the original notebook but achieves a similar LB score.
+All results and plots can be reproduced using the advanced-regression-techniques.ipynb notebook. The Scikit-learn style data transformation pipeline can be found in the art_pipeline.ipynb notebook which uses slightly different feature engineering than the model found in the original notebook but achieves a similar LB score.
 
 <p align="center"><img src="data/figures/best_model_subplots.png" width=800></p>
 <p align="center"><img src="data/figures/influence_plot.png" width=450></p>
