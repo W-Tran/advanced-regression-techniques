@@ -4,7 +4,7 @@
 
 #### Practicing regression in a Kaggle competition
 
-A "knowledge" competition hosted by Kaggle to practice advanced regression techniques. The aim of participating in this competition was to practice tackling a "typical" regression problem. The notebook includes EDA, data cleaning, and building/interpreting the model I found to perform the best. The feature engineering I did for this particular dataset was inspired by [this notebook](https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python). I tried to stick with Linear models (Lasso, OLSR, GLMs etc) and avoided producing multi-model ensembles to boost my LB score to ensure model simplicity and interpretability (see final section of the notebook). 
+A "knowledge" competition hosted by Kaggle to practice advanced regression techniques. The aim of participating in this competition was to practice tackling a "typical" regression problem. The notebook includes EDA, data cleaning, and building/interpreting the model I found to perform the best. The feature engineering I did for this particular dataset was inspired by [this notebook](https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python). I tried to stick with Linear models (Lasso, OLS, GLMs etc) and avoided producing multi-model ensembles to boost my LB score to ensure model simplicity and interpretability (see final section of the notebook). 
 
 My final model was a simple OLS with feature selection performed sequentially using [mlxtend](http://rasbt.github.io/mlxtend/) (0.12090 RMSLE, 1027/4942 on LB as of 24/08/2019).
 
